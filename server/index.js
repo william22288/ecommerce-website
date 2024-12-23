@@ -49,7 +49,7 @@ const seedDatabase = async () => {
                 type: 'Watch',
                 description: 'Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking, health-oriented capabilities, and wireless telecommunication, and integrates with iOS and other Apple products and services.',
                 price: 399,
-                image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/42-alum-blue-sport-nc-6s?wid=2000&hei=2000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1599815427000'
+                image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT_LphRFNK6XCRQMktjheLmzB1EPTwwgQ2zyiOGqJjtYeXyKKMZdMe0y0g78NZN8MRCtDFq8J8XAckT0lNGVH1V1q2uUfyvDermLzHPKF7mDnBOaAbDqFeA'
             },
             {
                 name: 'AirPods',
