@@ -23,6 +23,27 @@ const ProductList = () => {
             //console.log('products:', products);
         }, [products]);
     
+        const handleBuyNow = async () => {
+            try {
+              const response = await fetch('http://localhost:8080/api/purchase', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ products: sortedProducts }),
+              });
+        
+              if (response.ok) {
+                alert('Purchase successful!');
+              } else {
+                alert('Purchase failed. Please try again.');
+              }
+            } catch (error) {
+              console.error('Error during purchase:', error);
+              alert('An error occurred. Please try again.');
+            }
+          };
+
         const handleSortByPrice = () =>{
             const sorted = [...sortedProducts].sort((a, b) => a.price - b.price);
             setSortedProducts(sorted);
@@ -75,7 +96,7 @@ const ProductList = () => {
                     ))}
                 </ul>
                 <div className='buy-btn'>
-                    <button>Buy Now</button>
+                    <button className= "buy-now-btn" onClick={handleBuyNow}>Buy Now</button>
                 </div>
             </div>
         )
