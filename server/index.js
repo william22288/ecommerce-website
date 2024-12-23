@@ -87,6 +87,18 @@ app.get('/api/products', async (req, res) => {
     }
 });
 
+app.post('/api/purchase', (req, res) => {
+    const { products } = req.body;
+  
+    // Process the purchase logic here
+    // For example, you can save the purchase to the database
+  
+    console.log('Purchased products:', products);
+  
+    // Send a response back to the client
+    res.status(200).json({ message: 'Purchase successful!' });
+  });
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
