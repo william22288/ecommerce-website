@@ -4,7 +4,7 @@ import {itemContext} from '../context/ItemContext';
 const ProductItem = ({product}) => {
     const {addToCart, removeFromCart} = useContext(itemContext)
     const handleAddToCart = (product) => {
-        console.log(product)
+        //console.log(product)
         addToCart(product)
     };
     const handleRemoveFromCart = (product) => {
